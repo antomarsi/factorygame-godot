@@ -1,0 +1,57 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Sprites/belt.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Ejector.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Acceptor.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Mover.gd" type="Script" id=4]
+[ext_resource path="res://Entity/Actions/Acceptor.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Entity/Actions/Ejector.tscn" type="PackedScene" id=6]
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 56, 41 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 1 )
+region = Rect2( 56, 0, 56, 41 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 1 )
+region = Rect2( 112, 0, 56, 41 )
+
+[sub_resource type="SpriteFrames" id=9]
+animations = [ {
+"frames": [ SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Belt" type="Node2D"]
+position = Vector2( 128.152, 123.244 )
+script = ExtResource( 4 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -16 )
+frames = SubResource( 9 )
+frame = 2
+playing = true
+
+[node name="Actions" type="Node2D" parent="."]
+
+[node name="Ejector" type="Node2D" parent="Actions" instance=ExtResource( 6 )]
+position = Vector2( 14, -16 )
+script = ExtResource( 2 )
+
+[node name="Acceptor" type="Node2D" parent="Actions" instance=ExtResource( 5 )]
+position = Vector2( -14, -30 )
+script = ExtResource( 3 )
+
+[node name="TweenIn" type="Tween" parent="."]
+
+[node name="TweenOut" type="Tween" parent="."]
+
+[node name="Item" type="Node2D" parent="."]
+position = Vector2( 0, -24 )
+[connection signal="tween_completed" from="TweenIn" to="." method="_on_TweenIn_tween_completed"]
+[connection signal="tween_completed" from="TweenOut" to="." method="_on_TweenOut_tween_completed"]

@@ -1,0 +1,41 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "Acceptor",
+"language": "GDScript",
+"path": "res://Scripts/Acceptor.gd"
+}, {
+"base": "Node2D",
+"class": "Ejector",
+"language": "GDScript",
+"path": "res://Scripts/Ejector.gd"
+}, {
+"base": "Node2D",
+"class": "Item",
+"language": "GDScript",
+"path": "res://Scripts/Item.gd"
+} ]
+_global_script_class_icons={
+"Acceptor": "",
+"Ejector": "",
+"Item": ""
+}
+
+[application]
+
+config/name="FactoryGameGodot"
+run/main_scene="res://Main.tscn"
+config/icon="res://icon.png"
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"

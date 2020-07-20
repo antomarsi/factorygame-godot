@@ -1,0 +1,78 @@
+{ "frames": {
+   "OreDeposit 0.aseprite": {
+    "frame": { "x": 0, "y": 0, "w": 56, "h": 49 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 69, "y": 11, "w": 56, "h": 49 },
+    "sourceSize": { "w": 192, "h": 106 },
+    "duration": 100
+   },
+   "OreDeposit 1.aseprite": {
+    "frame": { "x": 0, "y": 0, "w": 56, "h": 49 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 69, "y": 11, "w": 56, "h": 49 },
+    "sourceSize": { "w": 192, "h": 106 },
+    "duration": 100
+   },
+   "OreDeposit 2.aseprite": {
+    "frame": { "x": 56, "y": 0, "w": 56, "h": 49 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 69, "y": 11, "w": 56, "h": 49 },
+    "sourceSize": { "w": 192, "h": 106 },
+    "duration": 100
+   },
+   "OreDeposit 3.aseprite": {
+    "frame": { "x": 56, "y": 0, "w": 56, "h": 49 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 69, "y": 11, "w": 56, "h": 49 },
+    "sourceSize": { "w": 192, "h": 106 },
+    "duration": 100
+   },
+   "OreDeposit 4.aseprite": {
+    "frame": { "x": 56, "y": 0, "w": 56, "h": 49 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 69, "y": 11, "w": 56, "h": 49 },
+    "sourceSize": { "w": 192, "h": 106 },
+    "duration": 100
+   },
+   "OreDeposit 5.aseprite": {
+    "frame": { "x": 56, "y": 0, "w": 56, "h": 49 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 69, "y": 11, "w": 56, "h": 49 },
+    "sourceSize": { "w": 192, "h": 106 },
+    "duration": 100
+   },
+   "OreDeposit 6.aseprite": {
+    "frame": { "x": 56, "y": 0, "w": 56, "h": 49 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 69, "y": 11, "w": 56, "h": 49 },
+    "sourceSize": { "w": 192, "h": 106 },
+    "duration": 100
+   },
+   "OreDeposit 7.aseprite": {
+    "frame": { "x": 56, "y": 0, "w": 56, "h": 49 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 69, "y": 11, "w": 56, "h": 49 },
+    "sourceSize": { "w": 192, "h": 106 },
+    "duration": 100
+   }
+ },
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.2.21-x64",
+  "image": "OreDeposit.png",
+  "format": "RGBA8888",
+  "size": { "w": 112, "h": 49 },
+  "scale": "1",
+  "slices": [
+   { "name": "Tile", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": 64, "y": 32, "w": 64, "h": 32 }, "pivot": {"x": 32, "y": 16 } }] }
+  ]
+ }
+}

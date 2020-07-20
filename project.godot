@@ -15,6 +15,11 @@ _global_script_classes=[ {
 "path": "res://Scripts/Acceptor.gd"
 }, {
 "base": "Node2D",
+"class": "Building",
+"language": "GDScript",
+"path": "res://Scripts/Building.gd"
+}, {
+"base": "Node2D",
 "class": "Ejector",
 "language": "GDScript",
 "path": "res://Scripts/Ejector.gd"
@@ -23,11 +28,18 @@ _global_script_classes=[ {
 "class": "Item",
 "language": "GDScript",
 "path": "res://Scripts/Item.gd"
+}, {
+"base": "Node2D",
+"class": "OreDeposit",
+"language": "GDScript",
+"path": "res://Scripts/OreDeposit.gd"
 } ]
 _global_script_class_icons={
 "Acceptor": "",
+"Building": "",
 "Ejector": "",
-"Item": ""
+"Item": "",
+"OreDeposit": ""
 }
 
 [application]
@@ -35,6 +47,10 @@ _global_script_class_icons={
 config/name="FactoryGameGodot"
 run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+ItemManager="*res://Scripts/autoload/item_manager.gd"
 
 [rendering]
 

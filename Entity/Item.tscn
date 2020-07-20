@@ -10,3 +10,4 @@ script = ExtResource( 2 )
 z_index = 100
 z_as_relative = false
 texture = ExtResource( 1 )
+hframes = 2

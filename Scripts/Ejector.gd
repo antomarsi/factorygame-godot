@@ -3,25 +3,19 @@ extends Node2D
 class_name Ejector
 
 signal item_ejected
+signal acceptor_setted
 
-export (NodePath) var acceptorPath
-var acceptor : Acceptor
+var acceptor : Acceptor setget set_acceptor 
 
-func _ready():
-	if (acceptorPath):
-		acceptor = get_node(acceptorPath)
-
-func can_eject_item() -> bool:
-	return get_child_count() == 0 and acceptor != null
+func set_acceptor(_acceptor: Acceptor):
+	acceptor = _acceptor
+	emit_signal("acceptor_setted")
 	
 func eject_item(item : Item):
-	add_child(item)
-
-func _process(delta):
-	if get_child_count() != 0 and acceptor != null:
-		if not acceptor.canAcceptItem():
-			yield(acceptor, "can_accept_item")
-		var item = get_child(0)
-		remove_child(item)
-		acceptor.setItem(item)
-		emit_signal("item_ejected")
+	if not acceptor:
+		yield(self, "acceptor_setted")
+	if not acceptor.can_accept_item():
+		yield(acceptor, "can_accept_item")
+	acceptor.set_item(item)
+	yield(acceptor, "item_accepted")
+	emit_signal("item_ejected")

@@ -1,6 +1,6 @@
 extends TileMap
 
-enum CELL_TYPE { BUILDING, ORE_DEPOSIT }
+enum CELL_TYPE { BUILDING }
 onready var buildings = $Buildings
 
 func _ready():
@@ -21,24 +21,19 @@ func request_build(building, world_pos):
 	var cell_id = get_cellv(pos)
 	match cell_id:
 		-1:
-			var b = building.instace()
 			set_cellv(pos, building.type)
 			buildings.add_child(building)
 			building.position = get_center_tile(pos)
+			building.initialize()
 		CELL_TYPE.BUILDING:
-			var b = building.instace()
 			var cb = get_cell_item(pos)
 			if cb:
 				cb.destroy()
 			set_cellv(pos, building.type)
 			buildings.call_deferred("add_child", building)
 			building.position = get_center_tile(pos)
-		CELL_TYPE.ORE_DEPOSIT:
-			var b = building.instace()
-			set_cellv(pos, building.type)
-			buildings.add_child(building)
-			building.position = get_center_tile(pos)
-				
+			building.initialize()
+
 func get_center_tile(pos) -> Vector2:
 	var new_pos = map_to_world(pos)
 	new_pos.y += (cell_size.y/2)

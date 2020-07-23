@@ -7,6 +7,10 @@ signal acceptor_setted
 
 var acceptor : Acceptor setget set_acceptor 
 
+func _ready():
+	var p = Vector2(1,0).rotated(deg2rad(90))
+	print(p)
+
 func set_acceptor(_acceptor: Acceptor):
 	acceptor = _acceptor
 	emit_signal("acceptor_setted")

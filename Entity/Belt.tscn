@@ -5,21 +5,21 @@
 [ext_resource path="res://Entity/Actions/Acceptor.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Entity/Actions/Ejector.tscn" type="PackedScene" id=6]
 
-[sub_resource type="AtlasTexture" id=1]
+[sub_resource type="AtlasTexture" id=3]
 atlas = ExtResource( 1 )
 region = Rect2( 0, 0, 56, 41 )
 
-[sub_resource type="AtlasTexture" id=2]
+[sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 1 )
 region = Rect2( 56, 0, 56, 41 )
 
-[sub_resource type="AtlasTexture" id=3]
+[sub_resource type="AtlasTexture" id=5]
 atlas = ExtResource( 1 )
 region = Rect2( 112, 0, 56, 41 )
 
-[sub_resource type="SpriteFrames" id=4]
+[sub_resource type="SpriteFrames" id=6]
 animations = [ {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
+"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -27,10 +27,12 @@ animations = [ {
 
 [node name="Belt" type="Node2D"]
 script = ExtResource( 4 )
+building_name = "Belt"
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+[node name="Sprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0, 11 )
-frames = SubResource( 4 )
+frames = SubResource( 6 )
+frame = 1
 playing = true
 
 [node name="Actions" type="Node2D" parent="."]

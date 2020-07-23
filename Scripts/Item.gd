@@ -8,8 +8,10 @@ enum ITEM_TYPE {
 	IRON
 }
 
+func _ready():
+	$Sprite.frame = type
+
 export (ITEM_TYPE) var type setget set_item_type
 
 func set_item_type(value):
-	$Sprite.frame = value
 	type = value

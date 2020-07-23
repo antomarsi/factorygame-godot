@@ -29,17 +29,17 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/Item.gd"
 }, {
-"base": "Node2D",
-"class": "OreDeposit",
+"base": "TileMap",
+"class": "OreMap",
 "language": "GDScript",
-"path": "res://Scripts/OreDeposit.gd"
+"path": "res://OreMap.gd"
 } ]
 _global_script_class_icons={
 "Acceptor": "",
 "Building": "",
 "Ejector": "",
 "Item": "",
-"OreDeposit": ""
+"OreMap": ""
 }
 
 [application]
@@ -51,6 +51,7 @@ config/icon="res://icon.png"
 [autoload]
 
 ItemManager="*res://Scripts/autoload/item_manager.gd"
+MapManager="*res://Scripts/autoload/map_manager.gd"
 
 [rendering]
 

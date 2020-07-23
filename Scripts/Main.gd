@@ -3,7 +3,6 @@ extends Node2D
 onready var cursor = $Cursor
 onready var map = $TileMap
 onready var grid = $Grid
-export (Array, PackedScene) var items
 
 func _ready():
 	pass # Replace with function body.
@@ -21,9 +20,9 @@ func _process(delta):
 func _unhandled_input(event):
 	if event is InputEventMouseButton and cursor.visible:
 		if event.button_index == BUTTON_LEFT:
-			set_item(0)
-		if event.button_index == BUTTON_RIGHT:
-			set_item(1)
+			set_item()
 
-func set_item(i):
-	grid.request_build(items[i], get_global_mouse_position())
+func set_item():
+	var building = $Control/PanelContainer/ItemList.get_selected_item()
+	if building != null:
+		grid.request_build(building.instance(), get_global_mouse_position())

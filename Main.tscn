@@ -59,9 +59,9 @@
 [sub_resource type="TileSet" id=2]
 0/name = "Copper"
 0/texture = ExtResource( 7 )
-0/tex_offset = Vector2( 0, -13 )
+0/tex_offset = Vector2( 0, -4 )
 0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 0, 0, 56, 49 )
+0/region = Rect2( 0, 0, 49, 32 )
 0/tile_mode = 0
 0/occluder_offset = Vector2( 0, 0 )
 0/navigation_offset = Vector2( 0, 0 )
@@ -73,9 +73,9 @@
 0/z_index = 0
 1/name = "Iron"
 1/texture = ExtResource( 7 )
-1/tex_offset = Vector2( 0, -29 )
+1/tex_offset = Vector2( 0, -4 )
 1/modulate = Color( 1, 1, 1, 1 )
-1/region = Rect2( 56, 0, 56, 49 )
+1/region = Rect2( 0, 32, 49, 32 )
 1/tile_mode = 0
 1/occluder_offset = Vector2( 0, 0 )
 1/navigation_offset = Vector2( 0, 0 )
